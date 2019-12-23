@@ -1,0 +1,14 @@
+#Input a name.
+#Find the length of the name
+#Print name backwords
+
+name = input ("Name-")
+print(len(name))
+nameLength = (len(name))
+if (nameLength%2==1):
+    print('I am an odd person')
+else:
+    print('I am an even person')
+print("Here is my name backwards!")
+for i in range(nameLength-1,-1,-1):
+     print(name[i])
