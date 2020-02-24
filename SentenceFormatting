@@ -1,0 +1,12 @@
+inputstring = input("Enter a Sentence")
+str11=" "
+n=len(inputstring)
+for i in range(0,len(inputstring),1):
+    if(inputstring[i]!=' '):
+        str11=str11+inputstring[i]
+    elif(inputstring[i-1]!=' '):
+        str11=str11+' '
+    if(inputstring[i]=='.'):
+        str11=str11+ ' '
+        
+print(str11)
