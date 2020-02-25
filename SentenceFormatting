@@ -1,12 +1,42 @@
-inputstring = input("Enter a Sentence")
-str11=" "
-n=len(inputstring)
-for i in range(0,len(inputstring),1):
-    if(inputstring[i]!=' '):
-        str11=str11+inputstring[i]
-    elif(inputstring[i-1]!=' '):
-        str11=str11+' '
-    if(inputstring[i]=='.'):
-        str11=str11+ ' '
-        
-print(str11)
+def correct(inputstring):
+    str11=" "
+    n=len(inputstring)
+    for i in range(0,len(inputstring),1):
+        if(inputstring[i]!=' '):
+            str11=str11+inputstring[i]
+        elif(inputstring[i-1]!=' '):
+            str11=str11+' '
+        if(inputstring[i]=='.'):
+            str11=str11+ ' '
+
+    print(str11)
+
+
+inputstring=input("Enter Sentence")
+correct(inputstring)
+
+
+def make_3g_form(word):
+    key={'y':'ies','o':'es','ch':'es','s':'es','sh':'es','x':'es','z':'es'}
+
+    n=len(word)
+    n=n-1
+    s=word[n]
+
+    a=word[n-1]
+
+    if word[n] in key or str1 in key:
+        if(word[n]=='y'):
+            word = word[0:n] + key.get("y")
+            #word=word.replace("y","ies")
+        elif ((word[n]=='h' and word[n-1]== 'c') or (word[n]=='h' and word[n-1]=='s')):
+             word=word+key.get("ch")
+        elif (word[n]=='o'or's'or'x'or 'z'):
+            word=word+key.get("s")
+    else:
+        word=word+'s'
+    print(word)
+    
+    
+word=input("Enter word")
+make_3g_form(word)
